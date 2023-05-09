@@ -4,21 +4,18 @@
  */
 package moonrailsystem;
 
-/**
- *
- * @author Logi
- */
+
 public class Train {
     private String name;
     private int numSeats;
     private Seat[] seats;
 
-    public Train(String name, int numSeats) {
+    public Train(String name, int numSeats, Price price) {
         this.name = name;
         this.numSeats = numSeats;
         this.seats = new Seat[numSeats];
         for (int i = 0; i < numSeats; i++) {
-            this.seats[i] = new Seat(i+1);
+            this.seats[i] = new Seat(i+1, price);
         }
     }
 
